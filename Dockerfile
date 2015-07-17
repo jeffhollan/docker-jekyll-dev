@@ -8,5 +8,5 @@ RUN mkdir /home/user/app
 WORKDIR /home/user/app
 EXPOSE 3000 3001
 VOLUME /home/user/app
-COPY docker-entrypoint.sh /home/jeff/entrypoint.sh
-ENTRYPOINT /home/jeff/entrypoint.sh
+COPY docker-entrypoint.sh /home/user/entrypoint.sh
+ENTRYPOINT /home/user/entrypoint.sh
