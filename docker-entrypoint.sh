@@ -1,5 +1,11 @@
 #!/bin/bash
 set -e
-git clone $REPO /home/jeff/app
-cd /home/jeff/app
-npm install && bower install --config.interactive=false && gulp watch --test
+
+if [ -d /home/jeff/app/.git]; then
+	git clone $REPO /home/user/app
+	cd /home/user/app
+	npm install && bower install --config.interactive=false && gulp watch --test
+else
+	cd /home/user/app
+	gulp watch --test
+fi
