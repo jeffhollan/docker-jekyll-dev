@@ -9,5 +9,6 @@ if [ ! -d /home/jeff/app/.git ]; then
 else
 	echo "Building and serving site..."
 	cd /home/user/app
+	git pull -f
 	gulp watch --test
 fi
